@@ -2111,6 +2111,10 @@ export const onPrerenderRoute =
         if (fallbackHeaders) {
           initialHeaders = fallbackHeaders;
         }
+
+        if (process.env.NEXT_PRIVATE_PPR_FALLBACK_REVALIDATE_FALSE === '1') {
+          initialRevalidate = false;
+        }
       }
     }
 
@@ -2374,8 +2378,9 @@ export const onPrerenderRoute =
       }
 
       // `allowQuery` is an array of query parameter keys that are allowed for
-      // a given path. All other query keys will be striped. We can automatically
-      // detect this for prerender (ISR) pages by reading the routes manifest file.
+      // a given path cache key. All other query keys will be striped. We can
+      // automatically  detect this for prerender (ISR) pages by reading the
+      // routes manifest file.
       const pageKey = srcRoute || routeKey;
       const route = routesManifest?.dynamicRoutes.find(
         (r): r is RoutesManifestRoute =>
@@ -2386,7 +2391,14 @@ export const onPrerenderRoute =
       // we have sufficient information to set it
       let allowQuery: string[] | undefined;
 
-      if (isEmptyAllowQueryForPrendered) {
+      if (
+        appDir &&
+        experimentalPPR &&
+        isFallback &&
+        process.env.NEXT_PRIVATE_PPR_FALLBACK_REVALIDATE_FALSE === '1'
+      ) {
+        allowQuery = [];
+      } else if (isEmptyAllowQueryForPrendered) {
         const isDynamic = isDynamicRoute(routeKey);
 
         if (!isDynamic) {
