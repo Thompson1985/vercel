@@ -1,5 +1,11 @@
 # @vercel/client
 
+## 13.4.10
+
+### Patch Changes
+
+- Replace `@zeit/fetch` usage with `node-fetch` ([#12171](https://github.com/vercel/vercel/pull/12171))
+
 ## 13.4.9
 
 ### Patch Changes

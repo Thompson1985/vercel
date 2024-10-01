@@ -1,5 +1,21 @@
 # vercel
 
+## 37.6.1
+
+### Patch Changes
+
+- [cli] Remove incorrect `--json` flag on `vercel alias` ([#12198](https://github.com/vercel/vercel/pull/12198))
+
+- Standardize most error output through `output.error` ([#12012](https://github.com/vercel/vercel/pull/12012))
+
+- Replace `psl` with `tldts` for domain parsing ([#12174](https://github.com/vercel/vercel/pull/12174))
+
+- [cli] add telemetry tracking to `alias ls` ([#12194](https://github.com/vercel/vercel/pull/12194))
+
+- Add support for tracking Continuous Integration vendors with telemetry ([#12180](https://github.com/vercel/vercel/pull/12180))
+
+- Add session id to events ([#12179](https://github.com/vercel/vercel/pull/12179))
+
 ## 37.6.0
 
 ### Minor Changes
