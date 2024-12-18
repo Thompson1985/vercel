@@ -1,5 +1,45 @@
 # @vercel/next
 
+## 4.4.0
+
+### Minor Changes
+
+- Provide `waitUntil` via `@next/request-context` ([#12286](https://github.com/vercel/vercel/pull/12286))
+
+## 4.3.21
+
+### Patch Changes
+
+- Revert "Fix edge cases with internal redirect sorting" ([#12615](https://github.com/vercel/vercel/pull/12615))
+
+## 4.3.20
+
+### Patch Changes
+
+- Fix edge cases with internal redirect sorting ([#12599](https://github.com/vercel/vercel/pull/12599))
+
+## 4.3.19
+
+### Patch Changes
+
+- Fix basePath root matching for error pages ([#12559](https://github.com/vercel/vercel/pull/12559))
+
+- Stabilize Chained Prerenders ([#12507](https://github.com/vercel/vercel/pull/12507))
+
+## 4.3.18
+
+### Patch Changes
+
+- Support allowHeader from Next.js for filtering request headers during revalidation ([#12420](https://github.com/vercel/vercel/pull/12420))
+
+## 4.3.17
+
+### Patch Changes
+
+- Fix caching issue with prerenders while Partial Prerendering is enabled ([#12325](https://github.com/vercel/vercel/pull/12325))
+
+- Revert disabling generation of route shells ([#12323](https://github.com/vercel/vercel/pull/12323))
+
 ## 4.3.16
 
 ### Patch Changes
