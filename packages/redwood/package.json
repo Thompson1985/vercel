@@ -17,7 +17,7 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@vercel/nft": "0.27.3",
+    "@vercel/nft": "0.27.8",
     "@vercel/routing-utils": "4.0.0",
     "@vercel/static-config": "3.0.0",
     "semver": "6.3.1",
